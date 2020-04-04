@@ -13,52 +13,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <link rel="icon" href="./favicon.ico">
     <script>var titleName = "人员疫区驻留情况查询系统";
-        function setBaiDuCount(scrCode) {
-            var _hmt = _hmt || [];
-            (function () {
-                var hm = document.createElement("script");
-                hm.src = scrCode;
-                var s = document.getElementsByTagName("script")[0];
-                s.parentNode.insertBefore(hm, s);
-            })();
-        }
-
         function setTitle() {
             let urlCode = location.href;//checkPage
-            if (urlCode.indexOf('checkPage') > -1) {
-                titleName = "中国联通大数据疫情防控行程查询助手";
-                if (urlCode.indexOf('search1.') > -1)//新
-                {
-                    //search1
-                    var _hmt = _hmt || [];
-                    (function () {
-                        var hm = document.createElement("script");
-                        hm.src = "https://hm.baidu.com/hm.js?f61f440698ecf5857f7e547e3617fd93";
-                        var s = document.getElementsByTagName("script")[0];
-                        s.parentNode.insertBefore(hm, s);
-                    })();
-                }
-                else if (urlCode.indexOf('search.') > -1)//旧
-                {
-                    //search
-                    var _hmt = _hmt || [];
-                    (function () {
-                        var hm = document.createElement("script");
-                        hm.src = "https://hm.baidu.com/hm.js?705f0dbd7dbd544d1e220b7f4b6ff64f";
-                        var s = document.getElementsByTagName("script")[0];
-                        s.parentNode.insertBefore(hm, s);
-                    })();
-                }
-                else {
-                    setBaiDuCount("https://hm.baidu.com/hm.js?705f0dbd7dbd544d1e220b7f4b6ff64f");
-                    setBaiDuCount("https://hm.baidu.com/hm.js?f61f440698ecf5857f7e547e3617fd93");
-                }
-            } else if (urlCode.indexOf('trend') > -1) {
-                titleName = "城市动态查询";
-            }
-            else {
-                titleName = "人员疫区驻留情况查询系统";
-            }
+            titleName = "人员疫区驻留情况查询系统";
             window.document.title = titleName;
         }
         setTitle();</script>
